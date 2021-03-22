@@ -1,0 +1,105 @@
+from math import*
+def cal():
+    a = input("Enter first number :")
+    b = input("Enter second number :")
+    print(float(a) + float(b))
+    print(float(a) - float(b))
+    print(float(a) * float(b))
+    print(float(a) / float(b))
+    print(sqrt(float(a)))
+    print(sqrt(float(b)))
+
+def list():
+    games=["FIFA","FORTNITE","GTA5","CYBERPUNK"]
+    games.insert(1,"PUBG")
+    games.insert(2, "WATCHDOGS")
+    print(games)
+
+def Calculator_IF_ELSE():
+    p = input("Enter Fisrt Value : ")
+    q = input("Enter Second Value : ")
+    o = input("Select Operator : ")
+
+    if o=="+":
+        print(float(p)+float(q))
+    elif o=="-":
+        print(float(p)-float(q))
+    elif o=="*":
+        print(float(p)*float(q))
+    elif o=="/":
+        print(float(p)/float(q))
+    else:
+        print("INVALID OPERATOR")
+
+def whileloop():
+    print("**************  GUESS GAME  ***************")
+    a=""
+    b="APPLE"
+    lives=3
+    end=False
+    while a!=b and not (end):
+        if lives > 0:
+            a=input("GUESS THE WORD: ")
+            lives-=1
+            print("Remaining Lives :" +str(lives))
+        else:
+            print("END OF LIVES")
+            end=True
+    if end:
+        print("YOU LOSE \n **************   GAME OVER  *************** ")
+    else:
+        print("YOU WON")
+
+def practice():
+    KK_Squad = ["KARACHI KINGS","BABAR", "IMAD", "AMIR", "SHARJEEL", "NABI"]
+    LQ_Squad = ["FAKHAR", "HAFEEZ", "DUNK", "WIESE", "SHAHEEN"]
+    MS_Squad = ["RIZWAN", "LYNN", "AFRIDI", "TAHIR", "VINCE"]
+    PZ_Squad = ["HAIDER", "MALIK", "WAHAB", "IMAM", "SAQIB"]
+    IU_Squad = ["SHADAB", "FAHEEM", "HASSAN", "HALES", "MUSA"]
+    QG_Squad = ["SARFARAZ", "STEYN", "HUSNAIN", "BANTON", "CUTTING"]
+    a=""
+    b="f"
+    c=False
+    while a!=b and not (c):
+        print("SEARCH PLAYER:  ")
+        print("PRESS f TO EXIT" )
+        a=input()
+        if a=="f":
+            c=True
+        elif a in KK_Squad:
+            print(KK_Squad)
+        elif a in LQ_Squad:
+            print(LQ_Squad)
+        elif a in MS_Squad:
+            print(MS_Squad)
+        elif a in PZ_Squad:
+            print(PZ_Squad)
+        elif a in IU_Squad:
+            print(IU_Squad)
+        elif a in QG_Squad:
+            print(QG_Squad)
+        elif a not in KK_Squad or LQ_Squad or MS_Squad or PZ_Squad or QG_Squad or IU_Squad:
+            print("NO SUCH PLAYER EXIST")
+
+def filing():
+    print("*****PRESS f TO EXIT*****")
+    print("write your message here: ")
+    b="f"
+    a=""
+    while a is not b:
+
+        a=input("")
+
+        if a =="f":
+            print("")
+        else:
+            newfile = open("obaid.txt","a")
+            newfile.write(a)
+            newfile.write("\n")
+
+            newfile.close()
+        newfile = open("obaid.txt")
+        print(newfile.read())
+        newfile.close()
+
+print(44+44)
